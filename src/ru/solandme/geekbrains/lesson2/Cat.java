@@ -12,6 +12,7 @@ public class Cat {
     void voice() {
         System.out.println("Myau");
     }
+
     void sleep() {
         System.out.println("Hrrr");
     }
@@ -26,5 +27,14 @@ public class Cat {
                 ", talisman=" + talisman +
                 '}';
         System.out.println(s);
+    }
+
+    Cat() { //Пустой конструктор кошки
+    }
+
+    public Cat(int age, String name, boolean isMale) {
+        this.age = age;
+        this.name = name;
+        this.isMale = isMale;
     }
 }
