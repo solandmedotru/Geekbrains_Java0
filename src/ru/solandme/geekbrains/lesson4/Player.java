@@ -10,8 +10,8 @@ public class Player {
         String s;
         s = scanner.nextLine();
         System.out.printf("Вы ввели %s\n", s);
-        int sho;
-        sho = Integer.parseInt(s);
-        return sho;
+        int shot;
+        shot = Integer.parseInt(s);
+        return shot;
     }
 }
