@@ -10,11 +10,11 @@ public class Cat {
     Talisman talisman;
 
     void voice() {
-        System.out.println("Myau");
+        System.out.println(this.name + " говорит Мяу!");
     }
 
     void sleep() {
-        System.out.println("Hrrr");
+        System.out.println(this.name + " сейчас спит.");
     }
 
     void about() {
@@ -30,6 +30,7 @@ public class Cat {
     }
 
     Cat() { //Пустой конструктор кошки
+        this.name = "Безымянная";
     }
 
     public Cat(int age, String name, boolean isMale) {
