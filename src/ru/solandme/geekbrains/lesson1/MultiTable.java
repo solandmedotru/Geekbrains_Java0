@@ -1,3 +1,5 @@
+package ru.solandme.geekbrains.lesson1;
+
 public class MultiTable {
     public static void main(String[] args) {
         outResult(1);
