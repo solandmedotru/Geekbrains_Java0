@@ -34,6 +34,11 @@ public class Field {
     }
 
     boolean isNotGameOver() {
-        return cells[ship.position] == 'X';
+        for (char cell : cells) {
+            if (cell == 'X') {
+                do return true; while (cell == 'X');
+            }
+        }
+        return false;
     }
 }
