@@ -4,13 +4,22 @@ import java.util.Random;
 
 public class SeaBattleObg {
     public static void main(String[] args) {
+
         Field field = new Field();
         Player player = new Player();
-        field.init();
         Random random = new Random();
+
+        field.init();
+
         Ship ship1 = new Ship(random.nextInt(10));
         Ship ship2 = new Ship(random.nextInt(10));
 
+        initShipPosition(field, random, ship1, ship2);
+
+        mainGameLoop(field, player);
+    }
+
+    private static void initShipPosition(Field field, Random random, Ship ship1, Ship ship2) {
         if (ship1.position == ship2.position) {
             while (ship1.position == ship2.position) {
                 ship2.position = random.nextInt(10);
@@ -19,7 +28,9 @@ public class SeaBattleObg {
 
         field.setShip(ship1);
         field.setShip(ship2);
+    }
 
+    private static void mainGameLoop(Field field, Player player) {
         System.out.println("ИГРА НАЧИНАЕТСЯ!!!");
 
         while (field.isNotGameOver()) {
