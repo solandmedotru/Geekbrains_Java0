@@ -3,16 +3,15 @@ package ru.solandme.geekbrains.lesson4;
 import java.util.Random;
 
 public class SeaBattleObg {
+    static Field field = new Field();
+    static Player player = new Player();
+    static Random random = new Random();
+    static Ship ship1 = new Ship(random.nextInt(10));
+    static Ship ship2 = new Ship(random.nextInt(10));
+
     public static void main(String[] args) {
 
-        Field field = new Field();
-        Player player = new Player();
-        Random random = new Random();
-
         field.init();
-
-        Ship ship1 = new Ship(random.nextInt(10));
-        Ship ship2 = new Ship(random.nextInt(10));
 
         initShipPosition(field, random, ship1, ship2);
 
